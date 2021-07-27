@@ -87,6 +87,10 @@ Dominic Loretti
 			-ms-transition: none !important;
 			transition: none !important;
 		}
+	#myCanvas{
+		height: 100%;
+		width: 100%;
+	}
 
 /* Type */
 
