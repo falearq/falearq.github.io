@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "make-cert": "^1.2.1",
+    "sslgen": "^0.0.4",
     "three": "^0.126.1"
   }
 }

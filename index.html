@@ -15,6 +15,7 @@
 
 						<header>
 							<h1>Bienvenido</h1>
+							<p>Soy Saúl Morales Vega, un artista multimedia mexicano.</p>
 
 							  <a href="#main" class="more">Learn More</a>
 						</header>
@@ -25,6 +26,9 @@
 			<!-- Main -->
 				<div id="main">
 					<div class="inner">
+						<P>
+						  Mueve tu cursor (versión de escritorio) o toca la pantalla (dispositivos móviles).
+						</P>
 						<canvas id="myCanvas"></canvas>
 						<p>
 							Este es un ejemplo de lo que puedes hacer con <a href="https://hydra-editor.glitch.me">hydra</a> 
@@ -36,7 +40,8 @@
 				<footer id="footer">
 					<div class="inner">
 						<h2>Checa mis proyectos</h2>
-						<p> Soy Saúl Morales Vega, un artista multimedia mexicano. Entra en contacto conmigo 💡 </p>
+						<img src="http://textfiles.com/underconstruction/HeHeartlandPark2601underconstructionbar9.gif">
+						<p> Aquí voy a ir poniendo mis trabajos pasados y actuales. Última actualización 24/08/2021 </p>
 
 						<ul class="icons">
 							<li><a href="https://github.com/falearq" class="icon fa-github"><span class="label">Soundcloud</span></a></li>
@@ -57,17 +62,23 @@
 			<script src="assets/js/main.js"></script>
 			<script>
 				// create a new hydra-synth instance
+				const canvas = document.getElementById("myCanvas")
+				canvas.width = 1080
+				canvas.height = 920
 				var hydra = new Hydra({
-				  canvas: document.getElementById("myCanvas"),
+				  canvas,
 				  detectAudio: false,
-				  enableStreamCapture: false
+				  enableStreamCapture: false,
+				  width: 1024,
+				  height: 920
+
 				});
 				osc(1, 0.1, 1.8)
 				  .rotate(0, 0.1)
 				  .kaleid()
 				  .color(-1, 1)
 				  .out();
-				osc(7,0.7,0.7).modulate(osc(8,0.1,0.1), 0.1).modulateKaleid(osc(()=>mouse.x/10,0.1,0.1), ()=>mouse.y/100).colorama(0.02).contrast(2).out(o0)
+				osc(7,0.7,0.7).modulate(osc(8,0.1,0.1), 0.1).modulateKaleid(osc(()=>mouse.x/100,0.1,0.1), ()=>mouse.y/100).colorama(0.02).contrast(2).out(o0)
 			  </script>
 
 		</div>
